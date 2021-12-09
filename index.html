@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#157878">
     <!-- CSS style -->
     <link rel="stylesheet" href="https://itai-nelken.github.io/aptpac/assets/css/style.css?v=653fdb393fe2b8d641b0cee23c86bc9c9a54893d">
-    <link rel="stylesheet" href="https://oxmc.github.io/Astrobuild2/css/style/loading.css" type="text/css">
+    <link rel="stylesheet" href="https://pi-ware.ml/assets/css/loading.css" type="text/css">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <!-- Begin Jekyll SEO tag v2.7.1 -->
     <title>Pi-Ware</title>
@@ -24,21 +24,16 @@
     {"description":"Pi-Ware is an app store for the Raspberry Pi that allows you to install apps that you can't get using sudo apt-get install in Terminal.","url":"https://pi-ware.ml/","@type":"WebSite","headline":"Pi-Ware is an app store for the Raspberry Pi that allows you to install apps that you can't get using sudo apt-get install in Terminal.","name":"Pi-Ware","@context":"https://schema.org"}</script>
     <!-- End Jekyll SEO tag -->
     <!-- Include scripts -->
-    <script src="https://pi-ware.ml/js/favicon.js"></script>
+    <script src="https://pi-ware.ml/assets/js/favicon.js"></script>
     <!-- End Include scripts -->
   <!-- HTMl view -->
   </head>
   <body>
     <!-- Loading animation -->
     <div class="loader">
-        <img src="https://i.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.webp" alt="Loading..." />
+        <img src="https://pi-ware.ml/assets/images/loading.webp" alt="Loading..." />
     </div>
-    <script>
-    window.addEventListener("load", function () {
-        const loader = document.querySelector(".loader");
-        loader.className += " hidden"; // class "loader hidden"
-    });
-    </script>
+    <script src="https://pi-ware.ml/assets/js/loading.js"></script>
     <!-- Main view -->
     <section class="page-header">
       <h1 class="project-name">Pi-Ware</h1>
@@ -75,7 +70,7 @@ bash install</span>
   <div class="tooltip">
   <button class="button2" onclick="copyToClipboard('p3')"><span class="tooltiptext" id="p3-tooltip">Copy to clipboard</span>Copy Code</button>
 </div>
-
+<!-- Copytext function -->
 <input style="display: none;" id="p1" type="text" value="git clone https://github.com/piware14/pi-ware.git
 cd pi-ware
 bash install">
@@ -90,7 +85,8 @@ bash install">
       <footer class="site-footer">
           <span class="center site-footer-owner"><a href="https://github.com/piware14/pi-ware">Pi-Ware</a> is maintained by <a href="https://pi-ware.ml/Team/">The Pi-Ware-Team</a>.</span>
           <span class="center site-footer-owner">This site is maintained by <a href="https://github.com/oxmc">oxmc</a>.</span>
-	  <span class="center site-footer-owner">© Copyright 2021 The Pi-Ware-Team. All rights reserved.</span>
+	        <span class="center site-footer-owner" id="copyright"></span>
+          <script src="https://pi-ware.ml/assets/js/copyright.js"></script>
       </footer>
     </section>
   </body>

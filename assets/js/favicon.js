@@ -20,11 +20,11 @@ if (currentMonth == "12") {
       title: 'Merry Chrsitmas!',
       displayMode: 2,
       message: 'Happy Holidays from the pi-ware team!',
-      position: 'Center',
+      position: 'center',
       transitionIn: 'flipInX',
       transitionOut: 'flipOutX',
       progressBarColor: 'rgb(0, 255, 184)',
-      image: '../images/logo-full-chrstmas.jpg',
+      image: '../assets/images/logo-full-christmas.png',
       imageWidth: 70,
       layout: 2,
       onClosing: function(){

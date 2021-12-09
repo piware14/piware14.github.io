@@ -10,6 +10,9 @@ if (!link) {
   var link = document.querySelector("link[rel~='icon']");
 }
 
-if (currentMonth == "12" && currentDay == "25") {
-  link.href = 'https://pi-ware.ml/images/logo-full-christmas.png';
+if (currentMonth == "12") {
+  if (currentDay == "25") {
+    alert("Merry Christmas and Happy Holidays from the pi-ware team!");
+  };
+  link.href = 'https://pi-ware.ml/assets/images/logo-full-christmas.png';
 };

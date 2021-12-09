@@ -10,6 +10,6 @@ if (!link) {
   var link = document.querySelector("link[rel~='icon']");
 }
 
-if (currentMonth == "12" && currentDay == "8") {
+if (currentMonth == "12" && currentDay == "25") {
   link.href = 'https://pi-ware.ml/images/logo-full-christmas.png';
 };

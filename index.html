@@ -24,6 +24,9 @@
     <script type="application/ld+json">
     {"description":"Pi-Ware is an app store for the Raspberry Pi that allows you to install apps that you can't get using sudo apt-get install in Terminal.","url":"https://pi-ware.ml/","@type":"WebSite","headline":"Pi-Ware is an app store for the Raspberry Pi that allows you to install apps that you can't get using sudo apt-get install in Terminal.","name":"Pi-Ware","@context":"https://schema.org"}</script>
     <!-- End Jekyll SEO tag -->
+    <!-- Include scripts -->
+    <script src="https://pi-ware.ml/js/copy.js"></script>
+     <!-- End Include scripts -->
   <!-- HTMl view -->
   </head>
   <body>
@@ -84,18 +87,6 @@ bash install
 </p>
 <!-- Script for copy button -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>
-function copyToClipboard(element) {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
-  document.execCommand("copy");
-  $temp.remove();
-  var tooltip = document.getElementById(`${element}-tooltip`);
-  tooltip.innerHTML = "Copied!";
-  setTimeout(function() {tooltip.innerHTML = "Copy to clipboard";},1000);
-}
-</script>
 <!--<h2 id="reviews">Reviews</h2>-->
       <footer class="site-footer">
           <span class="center site-footer-owner"><a href="https://github.com/piware14/pi-ware">Pi-Ware</a> is maintained by <a href="https://pi-ware.ml/Team/">The Pi-Ware-Team</a>.</span>

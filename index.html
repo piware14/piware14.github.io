@@ -76,14 +76,13 @@ bash install</span>
   <button class="button2" onclick="copyToClipboard('p3')"><span class="tooltiptext" id="p3-tooltip">Copy to clipboard</span>Copy Code</button>
 </div>
 
-<p style="display: none;" id="p1">git clone https://github.com/piware14/pi-ware.git
+<input style="display: none;" id="p1" type="text" value="git clone https://github.com/piware14/pi-ware.git
 cd pi-ware
-bash install
-</p>
-<p style="display: none;" id="p2">bash $HOME/pi-ware/updater force
-</p>
-<p style="display: none;" id="p3">pi-ware --uninstall-all
-</p>
+bash install">
+<input style="display: none;" id="p1" type="text" value="bash $HOME/pi-ware/updater force
+">
+<input style="display: none;" id="p1" type="text" value="pi-ware --uninstall-all
+">
 <!-- Script for copy button -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://pi-ware.ml/js/copy.js"></script>

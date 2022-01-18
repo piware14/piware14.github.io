@@ -13,13 +13,13 @@
     },
     {
       "name": "PiKATchu",
-      "role": "STAFF",
-      "logourl": "github",
+      "role": "Staff",
+      "logourl": "https://cdn.discordapp.com/avatars/613856270096531457/14563bc95cf422a57dfb49d010d382fd.webp?size=128",
       "desc": "Dev at pi-ware, aka the dude who ported lunar client to the pi"
     },
     {
       "name": "IsaacMv",
-      "role": "STAFF",
+      "role": "Staff",
       "logourl": "https://www.raulprietofernandez.net/media/k2/items/cache/600eb6612b31632f6c618c9c012d873d_L.jpg",
       "desc": "Pi-Ware's staff member and master at cross-compiling with 16 cores :D"
     }

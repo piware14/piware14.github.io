@@ -22,5 +22,11 @@
       "role": "Staff",
       "logourl": "https://www.raulprietofernandez.net/media/k2/items/cache/600eb6612b31632f6c618c9c012d873d_L.jpg",
       "desc": "Pi-Ware's staff member and master at cross-compiling with 16 cores :D"
+    },
+    {
+      "name": "Mr.Anonymous",
+      "role": "Staff",
+      "logourl": "https://static.wikia.nocookie.net/among-us-wiki/images/7/71/Black.png/revision/latest?cb=20211122214424",
+      "desc": "Oldest current member of Pi-ware"
     }
 ]

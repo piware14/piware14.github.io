@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Zach",
+        "role": "Owner",
+        "logourl": "https://oxmc.xyz/assets/img/placeholder.png",
+        "desc": "Pi-Ware's owner."
+    },
+    {
+        "name": "oxmc",
+        "role": "Co-owner",
+        "logourl": "https://oxmc.xyz/assets/img/placeholder.png",
+        "desc": "The latest version of the FireFox browser for the Raspberry Pi."
+    }
+]

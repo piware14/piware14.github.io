@@ -34,5 +34,11 @@
       "role": "Moderator",
       "logourl": "https://cdn.discordapp.com/avatars/669947245776338994/f27e2bb6178bb0e326a932eaa9d07186.webp",
       "desc": "Can't Even Use Program Just Here To Make Discord Safe"
+    },
+    {
+      "name": "Leha",
+      "role": "Developer",
+      "logourl": "https://avatars.githubusercontent.com/u/71947459?v=4",
+      "desc": "The creeper that wrote the PyQT5 version"
     }
 ]

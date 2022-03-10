@@ -34,7 +34,7 @@ async function appendData(data) {
     var br = document.createElement('br');
     var script = document.createElement('script');
       
-    if (logourl == "github") {
+    if (logo == "github") {
       logo = await GetLogo(name);
       console.log(`using github logo for ${name}`);
     } else if (logo == "none" || logo == null) {

@@ -19,6 +19,8 @@ async function appendData(data) {
     var logo = data[i].logourl;
     var desc = data[i].desc;
     
+    var statuselement = `<div id="${name}" class="status offline" data-bs-toggle="tooltip" data-bs-placement="top" title="Discord status"></div>`;
+    
     /* Get elements */
     var app = 'AppList'+count
     var mainContainer = document.getElementById(app);
@@ -46,10 +48,8 @@ async function appendData(data) {
     //console.log(logo);
     
     if (discordid == "none" || discordid == null) {
-      var statuselement = `<div id="${name}" class="status offline" data-bs-toggle="tooltip" data-bs-placement="top" title="Discord status"></div>`;
       console.log(`Not adding js to status element for ${name} to html as discord id is not set`);
     } else {
-      var statuselement = `<div id="${name}" class="status offline" data-bs-toggle="tooltip" data-bs-placement="top" title="Discord status"></div>`;
       script.innerHTML = `/* Get Status */ DiscordStatus({userId: "${discordid}", statElmId: "${name}", socket: true});`;
     };
     //console.log(statuselement);

@@ -86,8 +86,6 @@ async function appendData(data) {
     } else {
       count++;
     };
-    
-    //console.log(count);
   };
 };
 

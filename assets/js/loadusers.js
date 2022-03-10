@@ -46,7 +46,7 @@ async function appendData(data) {
     //console.log(logo);
     
     if (discordid == "none" || discordid == null) {
-      var statuselement = `<div id="${name}" class="status offline"></div>`;
+      var statuselement = `<div id="${name}" class="status offline" data-bs-toggle="tooltip" data-bs-placement="top" title="Discord status"></div>`;
       console.log(`Not adding js to status element for ${name} to html as discord id is not set`);
     } else {
       var statuselement = `<div id="${name}" class="status offline"></div>`;
@@ -87,6 +87,10 @@ async function appendData(data) {
       count++;
     };
   };
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  });
 };
 
 async function start() {

@@ -15,16 +15,16 @@ async function DiscordStatus(opts) {
 	//console.log(data.discord_status);
 	switch (data.discord_status) {
       case "offline":
-        statusDot.classList = "offline";
+        statusDot.classList = "status offline";
         break;
       case "online":
-        statusDot.classList = "online";
+        statusDot.classList = "status online";
 		break;
 	  case "dnd":
-        statusDot.classList = "dnd";
+        statusDot.classList = "status dnd";
 		break;
 	  case "idle":
-        statusDot.classList = "idle";
+        statusDot.classList = "status idle";
 		break;
 	};
   };

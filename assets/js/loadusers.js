@@ -32,6 +32,7 @@ async function appendData(data) {
     var applistdesc = document.createElement('p');
     var div2 = document.createElement('div');
     var br = document.createElement('br');
+    var script = document.createElement('script');
       
     if (logo == "github") {
       logo = await GetLogo(name);
@@ -45,13 +46,14 @@ async function appendData(data) {
     //console.log(logo);
     
     if (discordid == "none" || discordid == null) {
-      var statuselement = "";
+      var statuselement = "none";
       console.log(`Not adding status element for ${name} to html as discord id is not set`);
     } else {
       var statuselement = `<div id="${name}" class="status offline"></div>`;
-      var script = document.createElement('script');
       script.innerHTML = `/* Get Status */ DiscordStatus({userId: "${discordid}", statElmId: "${name}", socket: true});`;
     };
+    console.log(statuselement);
+    console.log(script);
 
     /* Add classes, images, title and description */
     applist.className += 'col card-deck';
@@ -73,7 +75,7 @@ async function appendData(data) {
     applist1.appendChild(applistdescdiv);
     applist1.appendChild(br);
     applist.appendChild(applist1);
-    if (typeof statuselement != "undefined" || statuselement != "" || statuselement != null) {
+    if (statuselement != "none" || statuselement != "" || statuselement != null) {
       applist.appendChild(script);
     };
     mainContainer.appendChild(applist);

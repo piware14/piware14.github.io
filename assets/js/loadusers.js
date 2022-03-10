@@ -49,7 +49,7 @@ async function appendData(data) {
       var statuselement = `<div id="${name}" class="status offline" data-bs-toggle="tooltip" data-bs-placement="top" title="Discord status"></div>`;
       console.log(`Not adding js to status element for ${name} to html as discord id is not set`);
     } else {
-      var statuselement = `<div id="${name}" class="status offline"></div>`;
+      var statuselement = `<div id="${name}" class="status offline" data-bs-toggle="tooltip" data-bs-placement="top" title="Discord status"></div>`;
       script.innerHTML = `/* Get Status */ DiscordStatus({userId: "${discordid}", statElmId: "${name}", socket: true});`;
     };
     //console.log(statuselement);

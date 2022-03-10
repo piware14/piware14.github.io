@@ -19,8 +19,6 @@ async function appendData(data) {
     var logo = data[i].logourl;
     var desc = data[i].desc;
     
-    var statuselement = `<div id="${name}" class="status offline"></div>`;
-    
     /* Get elements */
     var app = 'AppList'+count
     var mainContainer = document.getElementById(app);
@@ -48,10 +46,11 @@ async function appendData(data) {
     //console.log(logo);
     
     if (discordid == "none" || discordid == null) {
-      statuselement = "";
+      var statuselement = "";
       console.log(`Not adding status element for ${name} to html as discord id is not set`);
     } else {
-      
+      var statuselement = `<div id="${name}" class="status offline"></div>`;
+      script.innerHTML = `/* Get Status */ DiscordStatus({userId: "${discordid}", statElmId: "${name}", socket: true});`;
     };
 
     /* Add classes, images, title and description */
@@ -65,7 +64,6 @@ async function appendData(data) {
     applistname.className += 'card-text';
     applistdesc.innerHTML = desc;
     div2.className += 'd-flex justify-content-between align-items-center';
-    script.innerHTML = `/* Get Status */ DiscordStatus({userId: "${discordid}", statElmId: "${name}", socket: true});`;
 
     /* Add to main html */
     applistdescdiv.appendChild(div2);

@@ -73,7 +73,7 @@ async function appendData(data) {
     applist1.appendChild(applistdescdiv);
     applist1.appendChild(br);
     applist.appendChild(applist1);
-    if (typeof statuselement != "undefined") {
+    if (typeof statuselement != "undefined" || statuselement != "" || statuselement != null) {
       applist.appendChild(script);
     };
     mainContainer.appendChild(applist);

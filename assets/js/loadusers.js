@@ -33,14 +33,13 @@ async function appendData(data) {
     var br = document.createElement('br');
       
     if (data[i].logourl == "github") {
-      var logogh = await GetLogo(data[i].name);
-      var logo = logogh;
-      console.log(`using github logo for ${data[i].name}`);
-    } else if (data[i].logourl == "none" || null) {
-      console.log(`using placeholder for ${data[i].name}`);
+      var logo = await GetLogo(name);
+      console.log(`using github logo for ${name}`);
+    } else if (logo == "none" || logo == null) {
+      console.log(`using placeholder for ${name}`);
       var logo = "https://oxmc.xyz/assets/img/placeholder.png";
     } else {
-      console.log(`using custom logo for ${data[i].name}`);
+      console.log(`using custom logo for ${name}`);
     };
     //console.log(logo);
 
@@ -48,10 +47,10 @@ async function appendData(data) {
     applist.className += 'col card-deck';
     applist1.className += 'card shadow-sm';
     applistimg.className += 'card-img-top';
-    applistimg.src=logo;
+    applistimg.src = logo;
     applistdescdiv.className += 'card-body';
     applistdesc.className += 'card-text';
-    applistname.innerHTML = name;
+    applistname.innerHTML = `${name} <div id="${name}" class="status offline"></div>`;
     applistname.className += 'card-text';
     applistdesc.innerHTML = desc;
     div2.className += 'd-flex justify-content-between align-items-center';
@@ -66,6 +65,7 @@ async function appendData(data) {
     applist.appendChild(applist1);
     mainContainer.appendChild(applist);
 
+    /* Count loop fix */
     if (count == 2) {
       count = 1;
     } else {

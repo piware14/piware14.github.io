@@ -1,0 +1,23 @@
+.status {
+  content: "";
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status.offline {
+  background-color: #747f8d;
+}
+
+.status.online {
+  background-color: #3ba55d;
+}
+
+.status.dnd {
+  background-color: #ed4245;
+}
+
+.status.idle {
+  background-color: #faa81a;
+}

@@ -32,7 +32,6 @@ async function appendData(data) {
     var applistdesc = document.createElement('p');
     var div2 = document.createElement('div');
     var br = document.createElement('br');
-    var script = document.createElement('script');
       
     if (logo == "github") {
       logo = await GetLogo(name);
@@ -50,6 +49,7 @@ async function appendData(data) {
       console.log(`Not adding status element for ${name} to html as discord id is not set`);
     } else {
       var statuselement = `<div id="${name}" class="status offline"></div>`;
+      var script = document.createElement('script');
       script.innerHTML = `/* Get Status */ DiscordStatus({userId: "${discordid}", statElmId: "${name}", socket: true});`;
     };
 
@@ -82,6 +82,8 @@ async function appendData(data) {
     } else {
       count++;
     };
+    
+    console.log(count);
   };
 };
 

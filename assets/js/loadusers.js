@@ -46,8 +46,8 @@ async function appendData(data) {
     //console.log(logo);
     
     if (discordid == "none" || discordid == null) {
-      var statuselement = "none";
-      console.log(`Not adding status element for ${name} to html as discord id is not set`);
+      var statuselement = `<div id="${name}" class="status offline"></div>`;
+      console.log(`Not adding js to status element for ${name} to html as discord id is not set`);
     } else {
       var statuselement = `<div id="${name}" class="status offline"></div>`;
       script.innerHTML = `/* Get Status */ DiscordStatus({userId: "${discordid}", statElmId: "${name}", socket: true});`;

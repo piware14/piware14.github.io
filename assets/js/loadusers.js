@@ -52,8 +52,8 @@ async function appendData(data) {
       var statuselement = `<div id="${name}" class="status offline"></div>`;
       script.innerHTML = `/* Get Status */ DiscordStatus({userId: "${discordid}", statElmId: "${name}", socket: true});`;
     };
-    console.log(statuselement);
-    console.log(script);
+    //console.log(statuselement);
+    //console.log(script);
 
     /* Add classes, images, title and description */
     applist.className += 'col card-deck';
@@ -87,7 +87,7 @@ async function appendData(data) {
       count++;
     };
     
-    console.log(count);
+    //console.log(count);
   };
 };
 

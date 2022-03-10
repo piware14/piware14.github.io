@@ -13,10 +13,13 @@ async function appendData(data) {
   var count = 1;
   for (var i = 0; i < data.length; i++) {
     /* Set variables */
+    var discordid = data[i].discid;
     var name = data[i].name;
     var role = data[i].role;
     var logo = data[i].logourl;
     var desc = data[i].desc;
+    
+    var statuselement = `<div id="${name}" class="status offline"></div>`;
     
     /* Get elements */
     var app = 'AppList'+count
@@ -31,17 +34,25 @@ async function appendData(data) {
     var applistdesc = document.createElement('p');
     var div2 = document.createElement('div');
     var br = document.createElement('br');
+    var script = document.createElement('script');
       
-    if (data[i].logourl == "github") {
-      var logo = await GetLogo(name);
+    if (logourl == "github") {
+      logo = await GetLogo(name);
       console.log(`using github logo for ${name}`);
     } else if (logo == "none" || logo == null) {
       console.log(`using placeholder for ${name}`);
-      var logo = "https://oxmc.xyz/assets/img/placeholder.png";
+      logo = "https://oxmc.xyz/assets/img/placeholder.png";
     } else {
       console.log(`using custom logo for ${name}`);
     };
     //console.log(logo);
+    
+    if (discordid == "none" || discordid == null) {
+      statuselement = "";
+      console.log(`Not adding status element for ${name} to html as discord id is not set`);
+    } else {
+      
+    };
 
     /* Add classes, images, title and description */
     applist.className += 'col card-deck';
@@ -50,10 +61,11 @@ async function appendData(data) {
     applistimg.src = logo;
     applistdescdiv.className += 'card-body';
     applistdesc.className += 'card-text';
-    applistname.innerHTML = `${name} <div id="${name}" class="status offline"></div>`;
+    applistname.innerHTML = `${name} ${statuselement}`;
     applistname.className += 'card-text';
     applistdesc.innerHTML = desc;
     div2.className += 'd-flex justify-content-between align-items-center';
+    script.innerHTML = `/* Get Status */ DiscordStatus({userId: "${discordid}", statElmId: "${name}", socket: true});`;
 
     /* Add to main html */
     applistdescdiv.appendChild(div2);
@@ -63,6 +75,7 @@ async function appendData(data) {
     applist1.appendChild(applistdescdiv);
     applist1.appendChild(br);
     applist.appendChild(applist1);
+    applist.appendChild(script);
     mainContainer.appendChild(applist);
 
     /* Count loop fix */

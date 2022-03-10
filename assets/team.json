@@ -7,36 +7,42 @@
     },
     {
         "name": "oxmc",
+        "discid": "740965195496816721",
         "role": "Co-owner",
         "logourl": "github",
         "desc": "Pi-Ware's co-owner."
     },
     {
       "name": "PiKATchu",
+      "discid": "613856270096531457",
       "role": "Staff",
       "logourl": "https://cdn.discordapp.com/attachments/842103997510189056/951249374271402034/ab0e32d101a30596f6d578ef9b2ddcfc.png",
       "desc": "Dev at pi-ware, aka the dude who ported lunar client to the pi"
     },
     {
       "name": "IsaacMv",
+      "discid": "573878948732338186",
       "role": "Staff",
       "logourl": "https://www.raulprietofernandez.net/media/k2/items/cache/600eb6612b31632f6c618c9c012d873d_L.jpg",
       "desc": "Pi-Ware's staff member and master at cross-compiling with 16 cores :D"
     },
     {
       "name": "Mr.Anonymous",
+      "discid": "786623130604798022",
       "role": "Staff",
       "logourl": "https://cdn.discordapp.com/avatars/786623130604798022/9dce9ad9761e98a70b74928401a382e0.webp",
       "desc": "Oldest current member of Pi-ware"
     },
     {
       "name": "TheGizmoNero",
+      "discid": "669947245776338994",
       "role": "Moderator",
       "logourl": "https://cdn.discordapp.com/avatars/669947245776338994/a16d619e46c8de94ebbbf43c4e0b8566.webp",
       "desc": "Can Use Program"
     },
     {
       "name": "Leha",
+      "discid": "709502515804110909",
       "role": "Developer",
       "logourl": "https://avatars.githubusercontent.com/u/71947459?v=4",
       "desc": "The creeper that wrote the PyQT5 version"

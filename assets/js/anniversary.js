@@ -1,7 +1,4 @@
 var cfh = document.getElementById("confetti-holder");
-const date = new Date();
-const currentMonth = date.getMonth() + 1;
-const currentDay = date.getDate();
 
 if (currentMonth == "4") {
   if (currentDay == "24") {

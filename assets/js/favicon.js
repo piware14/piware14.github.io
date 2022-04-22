@@ -1,6 +1,3 @@
-const date = new Date();
-const currentMonth = date.getMonth() + 1;
-const currentDay = date.getDate();
 var link = document.querySelector("link[rel~='icon']");
 if (!link) {
   link = document.createElement('link');

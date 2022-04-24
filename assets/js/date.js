@@ -1,5 +1,5 @@
 const date = new Date();
-const currentDay = date.getFullYear();
+const currentYear = date.getFullYear();
 const currentMonth = date.getMonth() + 1;
 const currentDay = date.getDate();
 function yearssince(year) {

@@ -1,11 +1,5 @@
 var cfh = document.getElementById("confetti-holder");
-var av = yearssince("2021");
-var avy;
-if (av > 1) {
-  avy = "years";
-} else {
-  avy = "year";
-};
+var avy = yearssince("2021");
 if (currentMonth == "4") {
   if (currentDay == "24") {
     iziToast.show({
@@ -14,7 +8,7 @@ if (currentMonth == "4") {
       icon: 'icon-contacts',
       title: 'Happy anniversary to pi-ware!',
       displayMode: 2,
-      message: `Todays pi-ware's ${av} ${avy} anniversary!`,
+      message: `Todays pi-ware's ${avy} year anniversary!`,
       position: 'center',
       transitionIn: 'flipInX',
       transitionOut: 'flipOutX',
